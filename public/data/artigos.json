@@ -1,0 +1,81 @@
+{
+  "artigos": [
+    {
+      "id": 1,
+      "title": "O Jardim da Serenidade...",
+      "description": "A felicidade é, talvez, o tema mais antigo e universal da Filosofia. Desde a Antiguidade, ela tem sido comprovada sob diversas perspectivas, religiosas, psicológicas, sociais, econômicas ou biológicas, mas permanece de difícil definição. Cada pessoa percebe de maneira distinta, e sua essência parece sempre fugidia: momentos passageiros de prazer e bem-estar, mais do que um estado permanente. É justamente essa deficiência e valorização que transformou a felicidade em objeto de reflexão profunda entre os filósofos, especialmente no período helenístico, quando se buscou compreender o que há de singular no ser humano e na vida individual...",
+      "image": "https://substackcdn.com/image/fetch/$s_!sRbU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7599b413-b676-42b5-a086-45cc5bb1719f_960x705.jpeg",
+      "link": "https://substack.com/home/post/p-180877463",
+      "author": "Armando Leal",
+      "authorLink": "https://substack.com/@historiacontraataca",
+      "category": "Filosofia",
+      "readTime": "8 min",
+      "publishedDate": "2024-01-15",
+      "featured": true,
+      "tags": ["filosofia", "felicidade", "helenismo", "reflexão"]
+    },
+    {
+      "id": 2,
+      "title": "Pontos Sociais: Um Apelo ao Retorno...",
+      "description": "É uma tarde de domingo e você sai de casa sem um plano definido. Você caminha pela praça do bairro e acaba puxando conversa com os velinhos que vivem ali jogando damas — e vocês falam sobre a última rodada do brasileirão. Ou quem sabe você não encontra seus amigos num café ou no boteco da esquina para trocar ideias despretensiosamente sobre uma série que algum de vocês descobriu ou sobre o quão flop será o novo lançamento da Naughty Dog. Bom, se você é um zoomerzinho como eu, provavelmente você já faz tudo isso sem sair de casa. Você manda uma mensagem no grupo do Whats App e convoca todos os seus amigos a entrarem no Discord...",
+      "image": "https://substackcdn.com/image/fetch/$s_!4nuE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fae518601-d47c-40ce-bd05-a4324baf3a69_1269x715.png",
+      "link": "https://pablogibrin.substack.com/p/pontos-sociais-um-apelo-ao-retorno",
+      "author": "Pablo Gibrin",
+      "authorLink": "https://substack.com/@pablogibrin",
+      "category": "Sociologia",
+      "readTime": "10 min",
+      "publishedDate": "2024-01-10",
+      "featured": true,
+      "tags": ["sociologia", "tecnologia", "social", "comunicação"]
+    },
+    {
+      "id": 3,
+      "title": "O que é o governo chinês?",
+      "description": "Na internet é possível ver diversas discussões que colocam o governo chinês em aspectos econômicos e governamentais opostos. Dentre elas, fala-se do comunismo — que está até atrelado ao nome do partido que governa o país —, também se fala da China como sendo um país capitalista devido às suas recentes políticas econômicas, e há ainda outra denominação, pouco falada, segundo a qual o governo chinês seria um fascismo pós-comunista. Essa última eu só vi sendo referenciada pelo escritor Curtis Yarvin em seu texto 'Monarchism and Fascism Today'. Neste texto tentarei destrinchar cada uma dessas visões e seus contrapontos para tentar chegar a uma resposta à pergunta...",
+      "image": "https://substackcdn.com/image/fetch/$s_!tDYJ!,w_520,h_272,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F93d3ebbf-9898-4621-97c6-d7967fe3caa8_310x162.jpeg",
+      "link": "https://aristoteles4.substack.com/p/o-que-e-o-governo-chines",
+      "author": "Aristóteles",
+      "authorLink": "https://substack.com/@aristoteles4",
+      "category": "Política",
+      "readTime": "12 min",
+      "publishedDate": "2024-01-05",
+      "featured": true,
+      "tags": ["política", "china", "governo", "análise"]
+    },
+    {
+      "id": 4,
+      "title": "Redes de Computadores - Conectando o Mundo Digital",
+      "description": "Imagine uma rede de estradas que conecta cidades, permitindo que pessoas e mercadorias viajem de um lugar para outro. Redes de computadores funcionam de maneira similar, mas em vez de carros e caminhões, transportam dados digitais. Uma rede de computadores é um conjunto de dispositivos interconectados que podem compartilhar recursos e informações.",
+      "image": "https://substackcdn.com/image/fetch/$s_!eNBF!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc7412474-20e8-413f-ba7e-e98284f0dba0_736x397.jpeg",
+      "link": "https://open.substack.com/pub/zer0g0ld/p/redes-de-computadores-conectando?utm_campaign=post-expanded-share&utm_medium=post%20viewer",
+      "author": "Zer0",
+      "authorLink": "https://substack.com/@zer0g0ld",
+      "category": "Tecnologia",
+      "readTime": "15 min",
+      "publishedDate": "2024-01-20",
+      "featured": false,
+      "tags": ["tecnologia", "brasil", "rede", "ti"]
+    },
+    {
+      "id": 5,
+      "title": "Quando a Segurança Pública Enfrenta a Ideologia",
+      "description": "Quando o Estado hesita em exercer seu papel coercitivo, o crime avança. O Rio de Janeiro é hoje o exemplo mais visível desse desequilíbrio entre autoridade e desordem. A cada grande operação policial ressurgem os mesmos discursos previsíveis. “Não adianta nada”, “é enxugar gelo”. De fato, nenhuma ação isolada resolve o problema, mas se o Estado não agir, o gelo cresce e o caos se torna regra. A ausência da força legítima não significa paz, significa apenas a vitória de outras forças ilegítimas e predatórias.",
+      "image": "https://substackcdn.com/image/fetch/$s_!P31w!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fab4e0562-456b-4d03-9d45-50cb5a849754_1265x760.jpeg",
+      "link": "https://open.substack.com/pub/saladeguerra/p/quando-a-seguranca-publica-enfrenta?utm_campaign=post-expanded-share&utm_medium=post%20viewer",
+      "author": "Sala de Guerra - Netto",
+      "authorLink": "https://substack.com/@saladeguerra",
+      "category": "Segurança",
+      "readTime": "7 min",
+      "publishedDate": "2024-01-18",
+      "featured": false,
+      "tags": ["seguranca", "liberdade", "sociedade", "ética"]
+    }
+  ],
+  "metadata": {
+    "total": 5,
+    "featured": 3,
+    "categories": ["Filosofia", "Sociologia", "Política", "Educação", "Tecnologia"],
+    "lastUpdated": "2024-01-20",
+    "description": "Artigos em destaque da comunidade Hub Direitista"
+  }
+}

@@ -1,0 +1,403 @@
+/* src/app/manifesto/principios/page.module.css */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, 
+    #0a0a0f 0%,
+    #141219 30%,
+    #0a0a0f 100%);
+}
+
+/* Hero */
+.hero {
+  padding: 100px 20px 60px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 0%, 
+    rgba(233, 205, 122, 0.05) 0%,
+    transparent 50%);
+  border-bottom: 1px solid rgba(233, 205, 122, 0.1);
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroBadge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.heroBadge span {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(233, 205, 122, 0.8);
+  font-weight: 500;
+}
+
+.heroDivider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    #e9cd7a 50%,
+    transparent 100%);
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 700;
+  color: #e9cd7a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Principles */
+.principles {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.principlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.principleCard {
+  position: relative;
+  padding: 40px 30px;
+  background: rgba(20, 18, 25, 0.8);
+  border: 1px solid rgba(233, 205, 122, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.principleCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(233, 205, 122, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.principleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.principleIconWrapper {
+  position: relative;
+}
+
+.principleGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.principleNumber {
+  font-family: "Times New Roman", serif;
+  font-size: 32px;
+  color: rgba(233, 205, 122, 0.3);
+  font-weight: 700;
+}
+
+.principleTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #e9cd7a;
+  margin-bottom: 15px;
+}
+
+.principleDescription {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.principleQuote {
+  position: relative;
+  padding: 20px;
+  margin: 25px 0;
+  background: rgba(233, 205, 122, 0.05);
+  border-left: 3px solid rgba(233, 205, 122, 0.3);
+  border-radius: 4px;
+}
+
+.quoteMark {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-family: "Times New Roman", serif;
+  font-size: 40px;
+  color: rgba(233, 205, 122, 0.2);
+  line-height: 1;
+}
+
+.quoteText {
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.quoteAuthor {
+  font-size: 14px;
+  color: rgba(233, 205, 122, 0.7);
+  text-align: right;
+}
+
+.principleList {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;
+}
+
+.principleItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.listBullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.principleBorder {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.principleCard:hover .principleBorder {
+  left: 20px;
+  right: 20px;
+}
+
+/* Virtues */
+.virtues {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.sectionIcon {
+  color: #e9cd7a;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: #e9cd7a;
+  text-align: center;
+}
+
+.virtuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.virtueCard {
+  padding: 30px;
+  background: rgba(20, 18, 25, 0.8);
+  border: 1px solid rgba(233, 205, 122, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.virtueCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(233, 205, 122, 0.3);
+}
+
+.virtueIcon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.virtueTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e9cd7a;
+  margin-bottom: 10px;
+}
+
+.virtueDescription {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+/* CTA */
+.cta {
+  padding: 80px 20px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(233, 205, 122, 0.05) 0%,
+    transparent 70%);
+  border-top: 1px solid rgba(233, 205, 122, 0.1);
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaIcon {
+  color: #e9cd7a;
+  margin-bottom: 20px;
+}
+
+.ctaTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #e9cd7a;
+  margin-bottom: 20px;
+}
+
+.ctaText {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButtonPrimary {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, 
+    rgba(233, 205, 122, 0.2) 0%,
+    rgba(233, 205, 122, 0.3) 100%);
+  border: 1px solid rgba(233, 205, 122, 0.4);
+  color: #e9cd7a;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.ctaButtonPrimary:hover {
+  background: linear-gradient(135deg, 
+    rgba(233, 205, 122, 0.3) 0%,
+    rgba(233, 205, 122, 0.4) 100%);
+  border-color: rgba(233, 205, 122, 0.6);
+  transform: translateY(-2px);
+}
+
+.ctaButtonSecondary {
+  padding: 16px 32px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.ctaButtonSecondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 36px;
+  }
+  
+  .sectionTitle {
+    font-size: 28px;
+  }
+  
+  .ctaTitle {
+    font-size: 28px;
+  }
+  
+  .principlesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .virtuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+  }
+  
+  .ctaButtonPrimary,
+  .ctaButtonSecondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .virtuesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    padding: 80px 20px 40px;
+  }
+  
+  .principles {
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,597 @@
+/* src/app/manifesto/assinar/page.module.css */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, 
+    #0a0a0f 0%,
+    #141219 30%,
+    #0a0a0f 100%);
+}
+
+/* Hero */
+.hero {
+  padding: 100px 20px 60px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 0%, 
+    rgba(233, 205, 122, 0.05) 0%,
+    transparent 50%);
+  border-bottom: 1px solid rgba(233, 205, 122, 0.1);
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroBadge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.heroBadge span {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(233, 205, 122, 0.8);
+  font-weight: 500;
+}
+
+.heroDivider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    #e9cd7a 50%,
+    transparent 100%);
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 700;
+  color: #e9cd7a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Signature Form */
+.signatureForm {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formContainer {
+  background: rgba(20, 18, 25, 0.8);
+  border: 1px solid rgba(233, 205, 122, 0.1);
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.formIcon {
+  color: #e9cd7a;
+  margin-bottom: 20px;
+}
+
+.formTitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: #e9cd7a;
+  margin-bottom: 10px;
+}
+
+.formSubtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.formSection {
+  padding: 30px;
+  background: rgba(233, 205, 122, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(233, 205, 122, 0.05);
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #e9cd7a;
+  margin-bottom: 25px;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(233, 205, 122, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.vowContainer {
+  padding: 20px;
+  background: rgba(233, 205, 122, 0.05);
+  border-radius: 4px;
+  border-left: 3px solid rgba(233, 205, 122, 0.3);
+  margin-bottom: 20px;
+}
+
+.vowIntro {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.vowLine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.vowIcon {
+  color: rgba(233, 205, 122, 0.8);
+  flex-shrink: 0;
+}
+
+.vowText {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.vowConclusion {
+  font-size: 16px;
+  color: rgba(233, 205, 122, 0.9);
+  text-align: center;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: #e9cd7a;
+}
+
+.checkboxLabel {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.signatureField {
+  position: relative;
+  margin-top: 20px;
+}
+
+.signatureInput {
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(233, 205, 122, 0.3);
+  color: #e9cd7a;
+  font-size: 18px;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.signatureInput:focus {
+  outline: none;
+  border-bottom-color: rgba(233, 205, 122, 0.6);
+}
+
+.signatureLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    #e9cd7a 50%,
+    transparent 100%);
+}
+
+.signatureLabel {
+  font-size: 12px;
+  color: rgba(233, 205, 122, 0.6);
+  text-align: center;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.privacyBox {
+  padding: 20px;
+  background: rgba(20, 18, 25, 0.6);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.privacyText {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 32px;
+  background: linear-gradient(135deg, 
+    rgba(233, 205, 122, 0.2) 0%,
+    rgba(233, 205, 122, 0.3) 100%);
+  border: 1px solid rgba(233, 205, 122, 0.4);
+  color: #e9cd7a;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, 
+    rgba(233, 205, 122, 0.3) 0%,
+    rgba(233, 205, 122, 0.4) 100%);
+  border-color: rgba(233, 205, 122, 0.6);
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.formFooter {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(233, 205, 122, 0.1);
+  text-align: center;
+}
+
+.footerText {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.footerLink {
+  color: rgba(233, 205, 122, 0.8);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.footerLink:hover {
+  color: #e9cd7a;
+  text-decoration: underline;
+}
+
+/* Confirmation */
+.confirmation {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.confirmationContent {
+  text-align: center;
+}
+
+.confirmationIcon {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.confirmationIcon svg {
+  color: #e9cd7a;
+  animation: confirmationPulse 2s ease-in-out infinite;
+}
+
+.confirmationGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, 
+    rgba(233, 205, 122, 0.2) 0%,
+    transparent 70%);
+}
+
+@keyframes confirmationPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.confirmationTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #e9cd7a;
+  margin-bottom: 20px;
+}
+
+.confirmationText {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.confirmationText strong {
+  color: #e9cd7a;
+}
+
+.confirmationDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.detailCard {
+  padding: 30px;
+  background: rgba(20, 18, 25, 0.8);
+  border: 1px solid rgba(233, 205, 122, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.detailTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e9cd7a;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(233, 205, 122, 0.1);
+}
+
+.detailList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detailList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+}
+
+.detailList li:before {
+  content: '✓';
+  color: #e9cd7a;
+  font-weight: bold;
+}
+
+.commitmentBox {
+  padding: 20px;
+  background: rgba(233, 205, 122, 0.05);
+  border-radius: 4px;
+  border-left: 3px solid rgba(233, 205, 122, 0.3);
+}
+
+.commitmentText {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.commitmentSignature {
+  font-size: 14px;
+  color: rgba(233, 205, 122, 0.8);
+  text-align: right;
+  font-family: 'Times New Roman', serif;
+}
+
+.confirmationActions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actionButtonPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 32px;
+  background: linear-gradient(135deg, 
+    rgba(233, 205, 122, 0.2) 0%,
+    rgba(233, 205, 122, 0.3) 100%);
+  border: 1px solid rgba(233, 205, 122, 0.4);
+  color: #e9cd7a;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.actionButtonPrimary:hover {
+  background: linear-gradient(135deg, 
+    rgba(233, 205, 122, 0.3) 0%,
+    rgba(233, 205, 122, 0.4) 100%);
+  border-color: rgba(233, 205, 122, 0.6);
+  transform: translateY(-2px);
+}
+
+.actionButtonSecondary {
+  padding: 18px 32px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.actionButtonSecondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.actionButtonTertiary {
+  padding: 18px 32px;
+  background: transparent;
+  border: 1px solid rgba(233, 205, 122, 0.1);
+  color: rgba(233, 205, 122, 0.8);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.actionButtonTertiary:hover {
+  background: rgba(233, 205, 122, 0.05);
+  border-color: rgba(233, 205, 122, 0.3);
+}
+
+.confirmationNote {
+  padding: 20px;
+  background: rgba(233, 205, 122, 0.05);
+  border-radius: 4px;
+  border-left: 3px solid rgba(233, 205, 122, 0.3);
+}
+
+.confirmationNote p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.confirmationNote strong {
+  color: #e9cd7a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 36px;
+  }
+  
+  .confirmationTitle {
+    font-size: 28px;
+  }
+  
+  .formContainer {
+    padding: 30px 20px;
+  }
+  
+  .confirmationDetails {
+    grid-template-columns: 1fr;
+  }
+  
+  .formSection {
+    padding: 20px;
+  }
+  
+  .confirmationActions {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 20px 40px;
+  }
+  
+  .signatureForm {
+    padding: 40px 20px;
+  }
+  
+  .confirmation {
+    padding: 40px 20px;
+  }
+}
