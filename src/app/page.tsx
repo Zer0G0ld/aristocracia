@@ -7,6 +7,7 @@ import { getFeaturedArtigos, getFeaturedMembers, getFeaturedPortavoze } from '@/
 import { ArrowRight, BookOpen, Megaphone, Users, Award, Target, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Artigo, Portavoz, Member } from '@/lib/types';
 
 export default async function Home() {
   const [featuredArtigos, featuredMembers, featuredPortavoze] = await Promise.all([
@@ -165,7 +166,7 @@ export default async function Home() {
         </section>
 
         {/* Seção de Artigos em Destaque */}
-        {featuredArtigos.length > 0 && (
+        {featuredArtigos && featuredArtigos.length > 0 && (
           <section className={styles.articles}>
             <div className={styles.container}>
               <div className={styles.sectionHeader}>
@@ -177,7 +178,7 @@ export default async function Home() {
               </div>
               
               <div className={styles.articlesGrid}>
-                {featuredArtigos.slice(0, 3).map((artigo) => (
+                {featuredArtigos.slice(0, 3).map((artigo: Artigo) => (
                   <Link key={artigo.id} href={`/artigos/${artigo.id}`} className={styles.articleCard}>
                     <div className={styles.articleHeader}>
                       <div className={styles.articleCategory}>{artigo.category}</div>
@@ -189,7 +190,7 @@ export default async function Home() {
                     
                     <div className={styles.articleFooter}>
                       <div className={styles.articleAuthor}>
-                        {artigo.author?.name || "Hub Direitista"}
+                        {artigo.author?.name || "Aristocracia"}
                       </div>
                       <div className={styles.articleLink}>
                         Ler artigo
@@ -210,7 +211,7 @@ export default async function Home() {
         )}
 
         {/* Seção de Porta-vozes em Destaque */}
-        {featuredPortavoze.length > 0 && (
+        {featuredPortavoze && featuredPortavoze.length > 0 && (
           <section className={styles.portavoze}>
             <div className={styles.container}>
               <div className={styles.sectionHeader}>
@@ -222,7 +223,7 @@ export default async function Home() {
               </div>
               
               <div className={styles.portavozeGrid}>
-                {featuredPortavoze.slice(0, 4).map((portavoz) => (
+                {featuredPortavoze.slice(0, 4).map((portavoz: Portavoz) => (
                   <Link key={portavoz.id} href={`/porta-vozes/${portavoz.id}`} className={styles.portavozCard}>
                     <div className={styles.portavozImage}>
                       <Image
@@ -260,7 +261,7 @@ export default async function Home() {
         )}
 
         {/* Seção de Intelectuais em Destaque */}
-        {featuredMembers.length > 0 && (
+        {featuredMembers && featuredMembers.length > 0 && (
           <section className={styles.intellectuals}>
             <div className={styles.container}>
               <div className={styles.sectionHeader}>
@@ -272,7 +273,7 @@ export default async function Home() {
               </div>
               
               <div className={styles.intellectualsGrid}>
-                {featuredMembers.slice(0, 4).map((member) => (
+                {featuredMembers.slice(0, 4).map((member: Member) => (
                   <Link key={member.id} href={`/producao-intelectual/${member.id}`} className={styles.intellectualCard}>
                     <div className={styles.intellectualImage}>
                       <Image

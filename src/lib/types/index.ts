@@ -93,6 +93,7 @@ export interface DBData {
 
 // Tipos para artigos.json
 export interface Artigo {
+  date: ReactNode;
   id: number;
   title: string;
   description: string;

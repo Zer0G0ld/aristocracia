@@ -69,6 +69,16 @@ export async function getPortavoze() {
   return data.portavoze;
 }
 
+export async function getFeaturedPortavoze() {
+  const data = await getDBData();
+  return data.portavoze.filter(portavoz => portavoz.featured);
+}
+
+export async function getPortavozById(id: string) {
+  const data = await getDBData();
+  return data.portavoze.find(portavoz => portavoz.id === id);
+}
+
 export async function getPlataformas() {
   const data = await getDBData();
   return data.plataformas;
