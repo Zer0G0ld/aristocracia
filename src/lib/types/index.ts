@@ -47,6 +47,12 @@ export interface Portavoz {
   contentTypes: string[];
   platforms?: string[];
   links: Record<string, Link>;  // Usa o mesmo tipo Link
+  category?: string;
+  since?: string;
+  partnershipLevel?: string;
+  focus?: string;
+  description?: string;
+  platform?: string;
 }
 
 export interface Plataforma {

@@ -31,7 +31,10 @@ function convertToDBData(data: any): DBData {
     portavoze: (data.portavoze || []).map((portavoz: any): Portavoz => ({
       ...portavoz,
       img: portavoz.img?.replace('./public/', '/') || '/icons/default.jpg',
-      links: convertLinks(portavoz.links)
+      links: convertLinks(portavoz.links),
+      platform: portavoz.platforms?.primary || 'N/A',
+      focus: portavoz.specialization?.focus || 'Política e Cultura',
+      description: portavoz.bio
     })),
     plataformas: (data.plataformas || []).map((plataforma: any): Plataforma => ({
       ...plataforma,
