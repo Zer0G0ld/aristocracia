@@ -1,0 +1,517 @@
+/* src/app/error.module.css */
+/* ========================= */
+/*      ERROR PAGE           */
+/* ========================= */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  color: #f5f5f5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(
+      circle at 50% -20%,
+      rgba(127, 107, 55, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(127, 107, 55, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(127, 107, 55, 0.1) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      180deg,
+      #0a0a0a 0%,
+      #0b0b0b 25%,
+      #0c0c0c 50%,
+      #0b0b0b 75%,
+      #0a0a0a 100%
+    );
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+.container::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(127, 107, 55, 0.02) 2px,
+      rgba(127, 107, 55, 0.02) 4px
+    );
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Cracked glass effect */
+.crackedGlass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.02;
+  pointer-events: none;
+}
+
+.crackedGlass::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 4rem;
+  height: 1px;
+  background: linear-gradient(to right, transparent, white, transparent);
+}
+
+.crackedGlass::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 100%;
+  max-height: 4rem;
+  background: linear-gradient(to bottom, transparent, white, transparent);
+}
+
+.crackedCircle1,
+.crackedCircle2 {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.crackedCircle1 {
+  top: 33.33%;
+  left: 25%;
+  width: 8rem;
+  height: 8rem;
+}
+
+.crackedCircle2 {
+  bottom: 33.33%;
+  right: 25%;
+  width: 12rem;
+  height: 12rem;
+}
+
+/* Content wrapper */
+.contentWrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 72rem;
+  width: 100%;
+}
+
+/* Error container */
+.errorContainer {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .errorContainer {
+    padding: 3rem;
+  }
+}
+
+/* Error icon */
+.errorIconWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.errorIconContainer {
+  position: relative;
+}
+
+.errorIconCircle {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, rgba(127, 107, 55, 0.2), rgba(12, 12, 12, 1));
+  border: 1px solid rgba(233, 205, 122, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorIcon {
+  width: 3rem;
+  height: 3rem;
+  color: #e9cd7a;
+}
+
+.errorIconBadge {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #e9cd7a, #f8e9b0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorIconBadgeText {
+  color: #0a0a0a;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Titles */
+.errorTitle {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #e9cd7a, #f8e9b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (min-width: 768px) {
+  .errorTitle {
+    font-size: 3rem;
+  }
+}
+
+/* Error description */
+.errorDescription {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, rgba(127, 107, 55, 0.1), rgba(15, 14, 18, 0.3));
+  border: 1px solid rgba(127, 107, 55, 0.2);
+}
+
+.errorMessage {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.errorDetails {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.errorDetailsLabel {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.errorCode {
+  font-size: 0.875rem;
+  color: rgba(233, 205, 122, 0.7);
+  font-family: monospace;
+  word-break: break-all;
+}
+
+/* Action buttons */
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .actionButtons {
+    flex-direction: row;
+  }
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgba(233, 205, 122, 0.1), rgba(233, 205, 122, 0.05));
+  color: #e9cd7a;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(233, 205, 122, 0.2);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.primaryButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(233, 205, 122, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.primaryButton:hover {
+  background: linear-gradient(135deg, rgba(233, 205, 122, 0.2), rgba(233, 205, 122, 0.1));
+  border-color: rgba(233, 205, 122, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(233, 205, 122, 0.2),
+    0 0 0 1px rgba(233, 205, 122, 0.1);
+  color: #f8e9b0;
+}
+
+.primaryButton:hover::before {
+  left: 100%;
+}
+
+.primaryButton:active {
+  transform: translateY(0);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+}
+
+.secondaryButton:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.buttonIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Help text */
+.helpText {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.helpContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .helpContent {
+    flex-direction: row;
+  }
+}
+
+.helpMessage {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.helpLinks {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.helpLink {
+  font-size: 0.875rem;
+  color: #e9cd7a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.helpLink:hover {
+  color: #f8e9b0;
+}
+
+.linkSeparator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footerText {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footerIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Utility classes */
+.goldenText {
+  background: linear-gradient(to right, #e9cd7a, #f8e9b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .errorContainer {
+    padding: 1.5rem;
+  }
+  
+  .errorTitle {
+    font-size: 1.875rem;
+  }
+  
+  .errorMessage {
+    font-size: 1rem;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .helpContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .helpLinks {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .errorTitle {
+    font-size: 1.5rem;
+  }
+  
+  .errorIconCircle {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .errorIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}

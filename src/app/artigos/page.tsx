@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getArtigos, Artigo } from '@/lib/data';
+import { getArtigos, type Artigo } from '@/lib/data'; // Adicione 'type'
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -56,7 +56,7 @@ export default function ArtigosPage() {
         artigo.description.toLowerCase().includes(term) ||
         artigo.author.toLowerCase().includes(term) ||
         artigo.category.toLowerCase().includes(term) ||
-        artigo.tags?.some(tag => tag.toLowerCase().includes(term))
+        (artigo.tags && artigo.tags.some((tag: string) => tag.toLowerCase().includes(term))) // Adicione tipo
       );
     }
     

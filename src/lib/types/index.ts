@@ -59,17 +59,38 @@ export interface Portavoz {
 
 export interface Plataforma {
   id: string;
-  name: string;
+
+  // Conteúdo
+  title: string;
+  description: string;
+  image?: string;
+
+  // Classificação
   type: string;
-  img: string;
-  color: string;
-  featured: boolean;
-  members: number;
-  category: string;
+  category: 'social' | 'forum' | 'media' | 'academic';
   tags: string[];
-  access: string;
-  activity: string;
-  links: Record<string, Link>;  // Usa o mesmo tipo Link
+
+  // Métricas
+  members: number;
+  posts?: number;
+
+  // Status
+  status: 'active' | 'growing' | 'inactive';
+  featured: boolean;
+
+  // Acesso
+  access: 'public' | 'private' | 'invite';
+
+  // Datas
+  createdAt: string;
+  updatedAt: string;
+
+  // Extras
+  benefits?: string[];
+
+  // Links
+  url: string;
+  links: Record<string, Link>;
 }
 
 export interface DBMetadata {
@@ -98,19 +119,18 @@ export interface Artigo {
   id: number;
   title: string;
   description: string;
+  excerpt?: string; // ← Adicione esta linha
   image: string;
   link: string;
-  author: string; // Mantido como string
-  authorLink?: string; // Adicionado opcional
+  author: string;
+  authorLink?: string;
   category: string;
   readTime: string;
   publishedDate: string;
   featured: boolean;
   tags: string[];
-  // Adicionar propriedades que estão faltando para compatibilidade
-  date?: string; // Adicionado opcional
+  date?: string;
 }
-
 export interface ArtigosMetadata {
   total: number;
   featured: number;

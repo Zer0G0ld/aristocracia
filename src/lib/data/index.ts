@@ -1,9 +1,30 @@
-// src/lib/data/index.ts
-// Re-exporta tudo dos módulos
-export * from './db';
-export * from './artigos';
+// src/lib/data/index.ts - VERSÃO COM EXPORTAÇÃO EXPLÍCITA
+// Do db.ts
+export {
+  getDBData,
+  getMembers,
+  getFeaturedMembers,
+  getMemberById,
+  getPortavoze,
+  getFeaturedPortavoze,
+  getPortavozById,
+  getPlataformas,
+  getPlataformaById,
+  getCategorias,
+  getMetadata
+} from './db';
 
-// Re-exporta os tipos necessários
+// Do artigos.ts
+export {
+  getArtigos,
+  getFeaturedArtigos,
+  getArtigoById,
+  getArtigosByCategory,
+  getRelatedArtigos,
+  getArtigosMetadata
+} from './artigos';
+
+// Tipos
 export type { Artigo, ArtigosData, ArtigosMetadata } from '../types';
 export type { 
   Member, 

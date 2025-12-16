@@ -1,6 +1,5 @@
 // src/app/producao-intelectual/page.tsx
 import styles from './page.module.css';
-import Menu from '@/components/Menu/Menu';
 import { Book, FileText, Users, Award, Search, Filter, Download } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -69,7 +68,6 @@ export default async function ProducaoIntelectualPage() {
 
   return (
     <main className={styles.container}>
-      <Menu />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroBackground}>

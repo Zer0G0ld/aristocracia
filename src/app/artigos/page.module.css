@@ -239,6 +239,8 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-clamp: 3; /* Adicione esta linha */
+  max-height: calc(1.7em * 3); /* Altura máxima para 3 linhas */
 }
 
 /* Article Meta */

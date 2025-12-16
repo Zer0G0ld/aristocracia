@@ -41,28 +41,12 @@ export default async function PortaVozesPage() {
 
   const featuredPortavoze = [
     {
-      name: "Bruno Dias",
-      role: "Jornalista e Analista Político",
-      platform: "YouTube / Twitter",
-      followers: "250K+",
-      engagement: "Alto",
-      description: "Especialista em geopolítica e análise de cenários políticos"
-    },
-    {
       name: "Mídia BH",
-      role: "Coletivo de Comunicação",
+      role: "Coletivo de Comunicação, Jornalista e Analista Político",
       platform: "Telegram / Site",
-      followers: "100K+",
+      followers: "250K+",
       engagement: "Muito Alto",
-      description: "Agência de notícias focada em política nacional"
-    },
-    {
-      name: "Círculo de Estudos",
-      role: "Think Tank Intelectual",
-      platform: "Site / Eventos",
-      followers: "N/A",
-      engagement: "Elite",
-      description: "Grupo de estudos avançados em filosofia política"
+      description: "Agência de notícias focada em política nacional e Especialista em geopolítica e análise de cenários políticos"
     }
   ];
 

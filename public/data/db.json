@@ -271,7 +271,7 @@
       "bio": "Plataforma de mídia independente de Belo Horizonte focada em análise política profunda, cultural e social. Especializada em desconstrução narrativa e contra-hegemonia.",
       "slogan": "A verdade além das narrativas",
       "role": "Mídia Independente Estratégica",
-      "img": "/porta_vozes/Midia_BH.jpg",
+      "img": "/porta_vozes/BrunoDiasPR.jpg",
       "color": "#e9cd7a",
       "category": "mídia-digital",
       "subcategory": "coletivo",
@@ -346,7 +346,7 @@
           {
             "name": "Kick",
             "handle": "@MidiaBH",
-            "url": "https://kick.com/midiabh",
+            "url": "https://kick.com/brunodiaspr",
             "type": "live",
             "icon": "kick",
             "metrics": "15.2K seguidores",
@@ -356,21 +356,11 @@
           {
             "name": "Twitter",
             "handle": "@MidiaBH_",
-            "url": "https://twitter.com/MidiaBH_",
+            "url": "https://x.com/BrunoDiasCWB",
             "type": "microblogging",
             "icon": "twitter",
             "metrics": "28.3K seguidores",
             "engagement": "médio",
-            "frequency": "diária"
-          },
-          {
-            "name": "Telegram",
-            "handle": "@MidiaBHCanal",
-            "url": "https://t.me/MidiaBHCanal",
-            "type": "comunidade",
-            "icon": "telegram",
-            "metrics": "8.5K membros",
-            "engagement": "alto",
             "frequency": "diária"
           }
         ]
@@ -446,360 +436,6 @@
         "qualityScore": 92,
         "verificationLevel": "alto"
       }
-    },
-    {
-      "id": "bruno-dias-pr",
-      "name": "Bruno Dias",
-      "title": "Analista Geopolítico",
-      "bio": "Especialista em geopolítica, relações internacionais e análise estratégica. Focado em desvendar as complexidades do poder global e seus impactos nacionais.",
-      "slogan": "Geopolítica é destino",
-      "role": "Analista Estratégico",
-      "img": "/porta_vozes/BrunoDiasPR.jpg",
-      "color": "#b8860b",
-      "category": "influenciador",
-      "subcategory": "analista",
-      "featured": true,
-      "verified": true,
-      "priority": 2,
-      "status": "ativo",
-      "since": "2022",
-      "partnershipLevel": "oficial",
-      
-      "expertise": [
-        "Geopolítica",
-        "Relações Internacionais",
-        "Análise Estratégica",
-        "Segurança Nacional",
-        "Inteligência"
-      ],
-      
-      "specialization": {
-        "primary": "Geopolítica",
-        "secondary": "Análise Estratégica",
-        "focus": "Impacto global nas políticas nacionais"
-      },
-      
-      "stats": {
-        "subscribers": "78.2K",
-        "totalReach": "1.2M+",
-        "weeklyReach": "150K+",
-        "videos": 415,
-        "engagementRate": "9.2%",
-        "growthRate": "15.7%",
-        "consistency": "98%"
-      },
-      
-      "audience": {
-        "demographic": "25-55 anos",
-        "location": "Brasil (70%), Portugal (15%), EUA (10%), Outros (5%)",
-        "education": "80% ensino superior",
-        "interests": ["geopolítica", "história", "estratégia", "defesa", "economia"]
-      },
-      
-      "tags": [
-        "geopolítica",
-        "análise-estratégica",
-        "relações-internacionais",
-        "segurança-nacional",
-        "inteligência"
-      ],
-      
-      "contentTypes": [
-        "análises-geopolíticas",
-        "séries-temáticas",
-        "entrevistas-com-especialistas",
-        "mapas-interativos",
-        "relatórios-exclusivos"
-      ],
-      
-      "platforms": {
-        "primary": "YouTube",
-        "secondary": ["Twitter", "Telegram", "Substack"],
-        "all": [
-          {
-            "name": "YouTube",
-            "handle": "@BrunoDiasPR",
-            "url": "https://www.youtube.com/@BrunoDiasPR",
-            "type": "video",
-            "icon": "youtube",
-            "metrics": "78.2K inscritos",
-            "engagement": "muito-alto",
-            "frequency": "semanal"
-          },
-          {
-            "name": "Twitter",
-            "handle": "@BrunoDias_PR",
-            "url": "https://twitter.com/BrunoDias_PR",
-            "type": "microblogging",
-            "icon": "twitter",
-            "metrics": "42.5K seguidores",
-            "engagement": "alto",
-            "frequency": "diária"
-          },
-          {
-            "name": "Telegram",
-            "handle": "@BrunoDiasCanal",
-            "url": "https://t.me/BrunoDiasCanal",
-            "type": "comunidade",
-            "icon": "telegram",
-            "metrics": "12.8K membros",
-            "engagement": "alto",
-            "frequency": "diária"
-          },
-          {
-            "name": "Substack",
-            "handle": "@brunodias",
-            "url": "https://brunodias.substack.com",
-            "type": "newsletter",
-            "icon": "substack",
-            "metrics": "5.3K assinantes",
-            "engagement": "médio",
-            "frequency": "quinzenal"
-          }
-        ]
-      },
-      
-      "links": {
-        "youtube": {
-          "url": "https://www.youtube.com/@BrunoDiasPR",
-          "label": "YouTube - 78.2K inscritos",
-          "icon": "youtube",
-          "priority": 1
-        },
-        "twitter": {
-          "url": "https://twitter.com/BrunoDias_PR",
-          "label": "Twitter - 42.5K seguidores",
-          "icon": "twitter",
-          "priority": 2
-        },
-        "telegram": {
-          "url": "https://t.me/BrunoDiasCanal",
-          "label": "Telegram - 12.8K membros",
-          "icon": "telegram",
-          "priority": 3
-        },
-        "substack": {
-          "url": "https://brunodias.substack.com",
-          "label": "Substack - 5.3K assinantes",
-          "icon": "substack",
-          "priority": 4
-        }
-      },
-      
-      "collaborations": {
-        "withHD": [
-          {
-            "title": "Série 'Geopolítica da Reconstrução'",
-            "type": "curso",
-            "date": "2024",
-            "status": "planejado",
-            "episodes": 8,
-            "impact": "previsão: 100K+"
-          }
-        ],
-        "partners": ["Hub Direitista", "Instituto de Geopolítica", "Centro de Estudos Estratégicos"]
-      },
-      
-      "credentials": [
-        {
-          "title": "Mestrado em Relações Internacionais",
-          "institution": "Universidade de Brasília"
-        },
-        {
-          "title": "Certificação em Análise de Inteligência",
-          "institution": "Escola Superior de Guerra"
-        }
-      ],
-      
-      "achievements": [
-        {
-          "title": "Melhor Conteúdo Geopolítico",
-          "year": 2023,
-          "category": "Mídia Digital"
-        },
-        {
-          "title": "Previsão Estratégica do Ano",
-          "year": 2023,
-          "category": "Análise"
-        }
-      ],
-      
-      "testimonial": "Bruno Dias traz à tona a complexidade geopolítica com clareza e profundidade raras. Suas análises são fundamentais para compreender o tabuleiro global.",
-      
-      "metadata": {
-        "createdAt": "2023-08-10",
-        "updatedAt": "2024-01-20",
-        "lastActive": "2024-01-18",
-        "qualityScore": 95,
-        "verificationLevel": "muito-alto"
-      }
-    },
-    {
-      "id": "circulo-de-estudos",
-      "name": "Círculo de Estudos",
-      "title": "Think Tank Intelectual",
-      "bio": "Grupo de estudos avançados em filosofia política, história das ideias e teoria civilizacional. Focado na formação de quadros intelectuais para a reconstrução.",
-      "slogan": "A excelência precede a ação",
-      "role": "Think Tank de Elite",
-      "img": "/porta_vozes/thinktank.jpg",
-      "color": "#daa520",
-      "category": "organizacao",
-      "subcategory": "thinktank",
-      "featured": true,
-      "verified": true,
-      "priority": 3,
-      "status": "ativo",
-      "since": "2020",
-      "partnershipLevel": "fundador",
-      
-      "expertise": [
-        "Filosofia Política",
-        "História das Ideias",
-        "Teoria Civilizacional",
-        "Formação Intelectual",
-        "Metapolítica"
-      ],
-      
-      "specialization": {
-        "primary": "Formação Intelectual",
-        "secondary": "Filosofia Política",
-        "focus": "Desenvolvimento de quadros para reconstrução civilizacional"
-      },
-      
-      "stats": {
-        "members": 42,
-        "publications": 18,
-        "seminars": 56,
-        "graduated": 128,
-        "influenceScore": 88
-      },
-      
-      "audience": {
-        "demographic": "Acadêmicos, Intelectuais, Lideranças",
-        "location": "Global (comunidade online)",
-        "education": "100% ensino superior completo",
-        "interests": ["filosofia", "história", "política", "cultura", "tradição"]
-      },
-      
-      "tags": [
-        "thinktank",
-        "formação-intelectual",
-        "filosofia-política",
-        "elite-intelectual",
-        "estudos-avançados"
-      ],
-      
-      "contentTypes": [
-        "seminários-fechados",
-        "publicações-acadêmicas",
-        "cursos-especiais",
-        "debates-privados",
-        "mentorias"
-      ],
-      
-      "platforms": {
-        "primary": "Site",
-        "secondary": ["Newsletter", "Telegram"],
-        "all": [
-          {
-            "name": "Site Oficial",
-            "handle": "circulodeestudos.org",
-            "url": "https://circulodeestudos.org",
-            "type": "website",
-            "icon": "globe",
-            "metrics": "Acesso restrito",
-            "engagement": "elite",
-            "frequency": "constante"
-          },
-          {
-            "name": "Newsletter",
-            "handle": "@CirculoEstudos",
-            "url": "https://circulodeestudos.substack.com",
-            "type": "newsletter",
-            "icon": "substack",
-            "metrics": "2.5K assinantes",
-            "engagement": "muito-alto",
-            "frequency": "mensal"
-          },
-          {
-            "name": "Telegram",
-            "handle": "@CirculoEstudosHD",
-            "url": "https://t.me/CirculoEstudosHD",
-            "type": "comunidade",
-            "icon": "telegram",
-            "metrics": "Acesso por convite",
-            "engagement": "muito-alto",
-            "frequency": "diária"
-          }
-        ]
-      },
-      
-      "links": {
-        "website": {
-          "url": "https://circulodeestudos.org",
-          "label": "Site Oficial",
-          "icon": "globe",
-          "priority": 1
-        },
-        "newsletter": {
-          "url": "https://circulodeestudos.substack.com",
-          "label": "Newsletter - 2.5K assinantes",
-          "icon": "substack",
-          "priority": 2
-        }
-      },
-      
-      "collaborations": {
-        "withHD": [
-          {
-            "title": "Programa de Formação HD",
-            "type": "desenvolvimento",
-            "date": "2023-Presente",
-            "status": "em-andamento",
-            "participants": "85 formandos",
-            "impact": "formação da nova elite intelectual"
-          }
-        ],
-        "partners": ["Hub Direitista (fundador)", "Biblioteca HD", "Rede de Intelectuais"]
-      },
-      
-      "publications": [
-        {
-          "title": "Manifesto da Tradição Viva",
-          "year": 2023,
-          "type": "ensaio",
-          "impact": "referência fundamental"
-        },
-        {
-          "title": "Hierarquia e Excelência na Era Moderna",
-          "year": 2022,
-          "type": "estudo",
-          "impact": "influente nos círculos intelectuais"
-        }
-      ],
-      
-      "achievements": [
-        {
-          "title": "Think Tank Mais Influente",
-          "year": 2023,
-          "category": "Formação Intelectual"
-        },
-        {
-          "title": "Excelência Acadêmica",
-          "year": 2022,
-          "category": "Produção Intelectual"
-        }
-      ],
-      
-      "testimonial": "O Círculo de Estudos representa o ápice da excelência intelectual no pensamento direitista contemporâneo. Sua rigorosa formação é a base da futura elite reconstruidora.",
-      
-      "metadata": {
-        "createdAt": "2023-03-20",
-        "updatedAt": "2024-01-20",
-        "lastActive": "2024-01-19",
-        "qualityScore": 98,
-        "verificationLevel": "máximo"
-      }
     }
   ],
 
@@ -818,7 +454,7 @@
       "activity": "alta",
       "links": {
         "Discord": {
-          "url": "https://discord.gg/XncGYt2Y7g",
+          "url": "https://discord.gg/RvC5ffMWeQ",
           "type": "external",
           "icon": "💬"
         }
@@ -838,7 +474,7 @@
       "activity": "média",
       "links": {
         "Website": {
-          "url": "#",
+          "url": "https://drive.google.com/drive/folders/1qoGY2h8hUOdXuaH6Z89L4IAnsYhtlqg6",
           "type": "internal",
           "icon": "🌐"
         }

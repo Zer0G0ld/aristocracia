@@ -125,6 +125,10 @@ export default function Menu() {
         { href: "/votacao/resultados", label: "Resultados" },
         { href: "/votacao/arquivo", label: "Arquivo" }
       ]
+    },
+    {
+      href: "/plataformas",
+      label: "Plataformas",
     }
   ];
 
