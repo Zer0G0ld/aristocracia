@@ -1,7 +1,5 @@
 // src/app/page.tsx
-import Menu from '@/components/Menu/Menu';
 import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
 import styles from './page.module.css';
 import { getFeaturedArtigos, getFeaturedMembers, getFeaturedPortavoze } from '@/lib/data';
 import { ArrowRight, BookOpen, Megaphone, Users, Award, Target, ChevronRight } from 'lucide-react';
@@ -70,7 +68,6 @@ export default async function Home() {
 
   return (
     <>
-      <Menu />
       <Header />
       
       <main className={styles.main}>
@@ -166,6 +163,7 @@ export default async function Home() {
         </section>
 
         {/* Seção de Artigos em Destaque */}
+         {/* Seção de Artigos em Destaque */}
         {featuredArtigos && featuredArtigos.length > 0 && (
           <section className={styles.articles}>
             <div className={styles.container}>
@@ -182,15 +180,21 @@ export default async function Home() {
                   <Link key={artigo.id} href={`/artigos/${artigo.id}`} className={styles.articleCard}>
                     <div className={styles.articleHeader}>
                       <div className={styles.articleCategory}>{artigo.category}</div>
-                      <div className={styles.articleDate}>{artigo.date}</div>
+                      <div className={styles.articleDate}>
+                        {/* Usa publishedDate se date não existir */}
+                        {artigo.date || artigo.publishedDate}
+                      </div>
                     </div>
                     
                     <h3 className={styles.articleTitle}>{artigo.title}</h3>
-                    <p className={styles.articleDescription}>{artigo.description?.substring(0, 120)}...</p>
+                    <p className={styles.articleDescription}>
+                      {artigo.description?.substring(0, 120)}...
+                    </p>
                     
                     <div className={styles.articleFooter}>
                       <div className={styles.articleAuthor}>
-                        {artigo.author?.name || "Aristocracia"}
+                        {/* Autor é uma string, não um objeto */}
+                        {artigo.author || "Aristocracia"}
                       </div>
                       <div className={styles.articleLink}>
                         Ler artigo
@@ -343,8 +347,6 @@ export default async function Home() {
           </div>
         </section>
       </main>
-      
-      <Footer />
     </>
   );
 }

@@ -1,6 +1,8 @@
 // src/lib/types/index.ts
 // Tipos para db.json
 
+import { ReactNode } from "react";
+
 // Tipo mais flexível para links
 export interface Link {
   url: string;
@@ -93,19 +95,20 @@ export interface DBData {
 
 // Tipos para artigos.json
 export interface Artigo {
-  date: ReactNode;
   id: number;
   title: string;
   description: string;
   image: string;
   link: string;
-  author: string;
-  authorLink: string;
+  author: string; // Mantido como string
+  authorLink?: string; // Adicionado opcional
   category: string;
   readTime: string;
   publishedDate: string;
   featured: boolean;
   tags: string[];
+  // Adicionar propriedades que estão faltando para compatibilidade
+  date?: string; // Adicionado opcional
 }
 
 export interface ArtigosMetadata {

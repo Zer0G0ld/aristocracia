@@ -1,6 +1,8 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next';
 import './globals.css';
+import Menu from '@/components/Menu/Menu';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'Hub Direitista',
@@ -18,7 +20,9 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
       </head>
       <body>
+        <Menu />
         {children}
+        <Footer />
       </body>
     </html>
   );

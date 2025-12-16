@@ -1,6 +1,7 @@
 // src/lib/data/db.ts
-import { DBData, Member, Portavoz, Plataforma, Link } from '../types';
+import { DBData, Member, Portavoz, Plataforma, Link, Artigo } from '../types';
 import dbJson from '../../../public/data/db.json';
+import { getArtigos } from './artigos'; // Importar getArtigos do módulo correto
 
 // Função para converter os dados para o tipo correto
 function convertToDBData(data: any): DBData {
@@ -92,4 +93,30 @@ export async function getCategorias() {
 export async function getMetadata() {
   const data = await getDBData();
   return data.metadata;
+}
+
+// Adicione estas funções ao seu lib/data.ts
+export async function getArtigoById(id: number): Promise<Artigo | null> {
+  try {
+    const artigos = await getArtigos();
+    return artigos.find((artigo: Artigo) => artigo.id === id) || null;
+  } catch (error) {
+    console.error('Error fetching artigo by id:', error);
+    return null;
+  }
+}
+
+export async function getRelatedArtigos(category: string, excludeId: number): Promise<Artigo[]> {
+  try {
+    const artigos = await getArtigos();
+    return artigos
+      .filter((artigo: Artigo) => 
+        artigo.id !== excludeId && 
+        artigo.category === category
+      )
+      .slice(0, 3);
+  } catch (error) {
+    console.error('Error fetching related artigos:', error);
+    return [];
+  }
 }
