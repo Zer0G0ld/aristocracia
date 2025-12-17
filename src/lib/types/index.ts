@@ -1,17 +1,23 @@
 // src/lib/types/index.ts
-// Tipos para db.json
 
-import { ReactNode } from "react";
-
-// Tipo mais flexível para links
+// Tipos Base
 export interface Link {
   url: string;
-  type: string;  // Mudado de 'external' | 'internal' para string
+  type: 'external' | 'internal';
   icon: string;
   label?: string;
   metrics?: string;
 }
 
+export interface Stats {
+  articlesCount?: number;
+  subscribers?: string;
+  engagement?: string;
+  videoCount?: number;
+  [key: string]: string | number | undefined;
+}
+
+// Member
 export interface Member {
   id: string;
   name: string;
@@ -23,17 +29,13 @@ export interface Member {
   verified?: boolean;
   joinDate: string;
   expertise: string[];
-  stats: {
-    articlesCount?: number;
-    subscribers?: string;
-    engagement?: string;
-    videoCount?: number;
-  };
+  stats: Stats;
   tags: string[];
   contentTypes: string[];
-  links: Record<string, Link>;  // Usa o novo tipo Link
+  links: Record<string, Link>;
 }
 
+// Portavoz
 export interface Portavoz {
   id: string;
   name: string;
@@ -43,83 +45,52 @@ export interface Portavoz {
   color: string;
   featured: boolean;
   verified?: boolean;
-  expertise: string[];
-  stats: Record<string, string | number>;
-  tags: string[];
-  contentTypes: string[];
-  platforms?: string[];
-  links: Record<string, Link>;  // Usa o mesmo tipo Link
   category?: string;
   since?: string;
   partnershipLevel?: string;
   focus?: string;
-  description?: string;
   platform?: string;
-}
-
-export interface Plataforma {
-  id: string;
-
-  // Conteúdo
-  title: string;
-  description: string;
-  image?: string;
-
-  // Classificação
-  type: string;
-  category: 'social' | 'forum' | 'media' | 'academic';
+  description?: string;
+  expertise: string[];
+  stats: Record<string, string | number>;
   tags: string[];
-
-  // Métricas
-  members: number;
-  posts?: number;
-
-  // Status
-  status: 'active' | 'growing' | 'inactive';
-  featured: boolean;
-
-  // Acesso
-  access: 'public' | 'private' | 'invite';
-
-  // Datas
-  createdAt: string;
-  updatedAt: string;
-
-  // Extras
-  benefits?: string[];
-
-  // Links
-  url: string;
+  contentTypes: string[];
   links: Record<string, Link>;
 }
 
-export interface DBMetadata {
-  version: string;
-  lastUpdated: string;
-  description: string;
-  totalMembers: number;
-  totalArticles: number;
-  maintainers: string[];
-  categories: string[];
+// Plataforma - VERSÃO COMPLETA COM TODOS OS CAMPOS
+export interface Plataforma {
+  id: string;
+  name: string;
+  type: string;
+  img: string;
+  color: string;
+  featured: boolean;
+  members: number;
+  category: string;
+  tags: string[];
+  access: string;
+  activity: string;
+  links: Record<string, Link>;
+  description?: string;
+  title?: string;
+  
+  // Campos adicionais usados pelas páginas
+  posts?: number;
+  status?: string;
+  url?: string;
+  image?: string; // Alias para img para compatibilidade
+  createdAt?: string;
+  updatedAt?: string;
+  benefits?: string[];
 }
 
-export interface DBData {
-  metadata: DBMetadata;
-  members: Member[];
-  portavoze: Portavoz[];
-  plataformas: Plataforma[];
-  categorias: {
-    temas: Array<{id: string; nome: string; cor: string; descricao: string}>;
-    tiposConteudo: Array<{id: string; nome: string; icon: string}>;
-  };
-}
-
-// Tipos para artigos.json
+// Artigo
 export interface Artigo {
   id: number;
   title: string;
   description: string;
-  excerpt?: string; // ← Adicione esta linha
+  excerpt?: string;
   image: string;
   link: string;
   author: string;
@@ -131,6 +102,18 @@ export interface Artigo {
   tags: string[];
   date?: string;
 }
+
+// Metadata
+export interface DBMetadata {
+  version: string;
+  lastUpdated: string;
+  description: string;
+  totalMembers: number;
+  totalArticles: number;
+  maintainers: string[];
+  categories: string[];
+}
+
 export interface ArtigosMetadata {
   total: number;
   featured: number;
@@ -139,8 +122,19 @@ export interface ArtigosMetadata {
   description: string;
 }
 
+// Data Structures
+export interface DBData {
+  metadata: DBMetadata;
+  members: Member[];
+  portavoze: Portavoz[];
+  plataformas: Plataforma[];
+  categorias: {
+    temas: Array<{id: string; nome: string; cor: string; descricao: string}>;
+    tiposConteudo: Array<{id: string; nome: string; icon: string}>;
+  };
+}
+
 export interface ArtigosData {
   artigos: Artigo[];
   metadata: ArtigosMetadata;
 }
-

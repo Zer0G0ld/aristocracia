@@ -1,4 +1,3 @@
-// src/components/ItemCard.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { Member, Portavoz, Plataforma, Artigo } from '@/lib/types';
@@ -32,12 +31,13 @@ export default function ItemCard({ data, featured = false, showDetails = true }:
   const getDescription = () => {
     switch (type) {
       case 'plataforma':
-        return item.description;
+        return (item as Plataforma).description || '';
       case 'artigo':
-        return item.excerpt || item.description.substring(0, 100) + '...';
+        const artigo = item as Artigo;
+        return artigo.excerpt || artigo.description.substring(0, 100) + '...';
       case 'member':
       case 'portavoz':
-        return item.role || item.bio?.substring(0, 100) + '...';
+        return (item as Member | Portavoz).bio?.substring(0, 100) + '...' || '';
       default:
         return '';
     }
@@ -45,12 +45,13 @@ export default function ItemCard({ data, featured = false, showDetails = true }:
 
   const getTitle = () => {
     switch (type) {
-      case 'plataforma':
       case 'artigo':
-        return item.title || 'Item sem título';
+        return (item as Artigo).title;
+      case 'plataforma':
+        return (item as Plataforma).name;
       case 'member':
       case 'portavoz':
-        return item.name || 'Item sem nome';
+        return (item as Member | Portavoz).name;
       default:
         return 'Item';
     }
@@ -59,20 +60,19 @@ export default function ItemCard({ data, featured = false, showDetails = true }:
   const getImage = () => {
     switch (type) {
       case 'artigo':
-        return item.image || '/icons/testes/default.jpg';
+        return (item as Artigo).image;
       case 'plataforma':
-        return item.image || '/icons/testes/default.jpg';
       case 'member':
       case 'portavoz':
-        return item.img || '/icons/testes/default.jpg';
+        return (item as Plataforma | Member | Portavoz).img;
       default:
         return '/icons/testes/default.jpg';
     }
   };
 
-  const getPostsCount = () => {
+  const getMembersCount = () => {
     if (type === 'plataforma') {
-      return item.posts || 0;
+      return (item as Plataforma).members || 0;
     }
     return 0;
   };
@@ -80,6 +80,7 @@ export default function ItemCard({ data, featured = false, showDetails = true }:
   const title = getTitle();
   const imageSrc = getImage();
   const description = getDescription();
+  const membersCount = getMembersCount();
 
   return (
     <Link href={getLink()} className={`${styles.card} ${featured ? styles.featured : ''}`}>
@@ -112,39 +113,24 @@ export default function ItemCard({ data, featured = false, showDetails = true }:
         )}
 
         {/* Mostrar stats específicos para plataformas */}
-        {type === 'plataforma' && (
+        {type === 'plataforma' && membersCount > 0 && (
           <div className={styles.platformStats}>
             <div className={styles.stat}>
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
               </svg>
-              <span>{item.members > 1000 
-                ? `${(item.members / 1000).toFixed(1)}K membros` 
-                : `${item.members} membros`}
+              <span>{membersCount > 1000 
+                ? `${(membersCount / 1000).toFixed(1)}K membros` 
+                : `${membersCount} membros`}
               </span>
             </div>
-            
-            {item.posts && item.posts > 0 && (
-              <div className={styles.stat}>
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
-                </svg>
-                <span>{getPostsCount() > 1000 
-                  ? `${(getPostsCount() / 1000).toFixed(1)}K posts` 
-                  : `${getPostsCount()} posts`}
-                </span>
-              </div>
-            )}
           </div>
         )}
 
         {/* Mostrar categoria para plataformas */}
         {type === 'plataforma' && (
           <div className={styles.category}>
-            {item.category === 'social' && '🌐 Social'}
-            {item.category === 'forum' && '💬 Fórum'}
-            {item.category === 'media' && '📺 Mídia'}
-            {item.category === 'academic' && '🎓 Acadêmico'}
+            {(item as Plataforma).category || 'Comunidade'}
           </div>
         )}
       </div>

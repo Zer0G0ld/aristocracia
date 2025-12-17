@@ -3,17 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "validate": "node scripts/validate-data.js",
+    "validate:strict": "NODE_ENV=production node scripts/validate-data.js",
+    "dev": "next dev -p 5468",
+    "dev:with-check": "npm run validate && next dev -p 5468",
     "build": "next build",
+    "build:with-check": "npm run validate && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
+    "lru-cache": "^11.2.4",
     "lucide-react": "^0.561.0",
     "next": "16.0.8",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "rss-parser": "^3.13.0",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",
