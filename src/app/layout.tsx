@@ -5,7 +5,7 @@ import Menu from '@/components/Menu/Menu';
 import Footer from '@/components/Footer/Footer';
 
 export const metadata: Metadata = {
-  title: 'Hub Direitista',
+  title: 'Aristocracia',
   description: 'Um círculo de jovens talentos que rejeita o conformismo',
 };
 
