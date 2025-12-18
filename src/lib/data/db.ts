@@ -373,8 +373,12 @@ export async function getPlataformas(): Promise<Plataforma[]> {
  * Busca uma plataforma pelo ID
  * @returns A plataforma ou null se não encontrada
  */
-export async function getPlataformaById(id: string): Promise<Plataforma | null> {
-  if (!id || typeof id !== 'string') return null;
+// src/lib/data/db.ts
+export async function getPlataformaById(id: string | undefined): Promise<Plataforma | null> {
+  // Validação robusta
+  if (!id || typeof id !== 'string' || id.trim() === '') {
+    return null;
+  }
   
   const data = await getDBData();
   const plataforma = data.plataformas.find(p => p.id === id);

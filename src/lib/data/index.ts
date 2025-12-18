@@ -1,10 +1,13 @@
-// src/lib/data/index.ts - VERSÃO MELHORADA
+// src/lib/data/index.ts
 /**
  * 📦 Módulo de exportação centralizada de dados
  * 
  * Este módulo fornece acesso unificado aos dados do Hub Direitista.
  * Todas as importações devem ser feitas através deste arquivo.
  */
+
+import { getArtigos, getFeaturedArtigos } from './artigos';
+import { getMembers, getPortavoze, getPlataformas, getFeaturedMembers, getFeaturedPortavoze } from './db';
 
 // Re-exportações do db.ts
 export {
@@ -31,23 +34,16 @@ export {
   getArtigosMetadata
 } from './artigos';
 
-// Exportação de tipos - Grupo 1: Tipos principais
+// Exportação de tipos
 export type {
-  // Tipos de entidades
   Member,
   Portavoz,
   Plataforma,
   Artigo,
-  
-  // Tipos auxiliares
   Link,
   Stats,
-  
-  // Tipos de metadata
   DBMetadata,
   ArtigosMetadata,
-  
-  // Tipos de estrutura
   DBData,
   ArtigosData
 } from '../types';
@@ -70,12 +66,15 @@ export async function getTotalCounts() {
 }
 
 export async function getHomepageData() {
-  const [featuredMembers, featuredPortavoze, featuredPlataformas, featuredArtigos] = await Promise.all([
+  const [featuredMembers, featuredPortavoze, featuredArtigos] = await Promise.all([
     getFeaturedMembers(),
     getFeaturedPortavoze(),
-    getPlataformas().then(plats => plats.filter(p => p.featured)),
     getFeaturedArtigos()
   ]);
+  
+  // Filtra plataformas featured
+  const plataformas = await getPlataformas();
+  const featuredPlataformas = plataformas.filter(p => p.featured);
   
   return {
     featuredMembers,

@@ -1,3 +1,4 @@
+// src/app/api/destaques/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { CacheManager } from '@/lib/services/cache';
 import { getFeaturedArtigos } from '@/lib/data';

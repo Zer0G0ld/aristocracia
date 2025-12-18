@@ -443,8 +443,10 @@
     {
       "id": "aristocracia",
       "name": "Aristocracia",
+      "description": "Central de relacionamento e networking para membros da comunidade Aristocrata. Espaço exclusivo para debates, troca de ideias e colaboração entre os principais pensadores e criadores de conteúdo.",
       "type": "comunidade",
-      "img": "./public/icons/png/aristocracia.png",
+      "status": "active",
+      "img": "./public/icons/png/AristoDiscord.png",
       "color": "#3d3d3d",
       "featured": true,
       "members": 150,
@@ -454,7 +456,7 @@
       "activity": "alta",
       "links": {
         "Discord": {
-          "url": "https://discord.gg/RvC5ffMWeQ",
+          "url": "https://discord.gg/FPbCkjKYmZ ",
           "type": "external",
           "icon": "💬"
         }
@@ -463,8 +465,10 @@
     {
       "id": "biblioteca-alexandria",
       "name": "Biblioteca de Alexandria",
+      "description": "Base Centralizadora de livros da comunidade Aristocrata, com diversos títulos em PDF disponíveis para download gratuito.",
       "type": "fórum",
-      "img": "./public/icons/png/LibraryofAlexandria.jpg",
+      "status": "active",
+      "img": "./public/icons/png/LibraryofAristocracia.png",
       "color": "#4a6fa5",
       "featured": false,
       "members": 75,
