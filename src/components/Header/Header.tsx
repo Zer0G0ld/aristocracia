@@ -40,7 +40,7 @@ export default function Header() {
       {/* Manifesto e subtítulo */}
       <div className={styles.manifestoContainer}>
         <p className={styles.manifesto}>
-          Não seguimos o espírito do tempo.
+          Nadamos contra a corrente do tempo, não seguimos sua maré.
         </p>
         
         <div className={styles.quoteMark}>"</div>

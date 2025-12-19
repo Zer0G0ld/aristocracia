@@ -50,19 +50,22 @@ export default async function Home() {
       title: "Produção Intelectual",
       description: "Obras e pensadores que fundamentam nossa missão",
       link: "/producao-intelectual",
-      image: "/icons/png/LibraryofAristocracia.png"
+      image: "/icons/png/LibraryofAristocracia.png",
+      featured: true
     },
     {
       title: "Porta-vozes",
       description: "Vozes que amplificam nossa mensagem",
       link: "/porta-vozes",
-      image: "/icons/png/porta-vozes.png"
+      image: "/icons/png/porta-vozes.png",
+      featured: true
     },
     {
       title: "Artigos",
       description: "Análises e reflexões sobre o tempo presente",
       link: "/artigos",
-      image: "/icons/png/AristoDiscord.png"
+      image: "/icons/png/AristoDiscord.png",
+      featured: true
     }
   ];
 

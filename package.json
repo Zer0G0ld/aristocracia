@@ -9,7 +9,7 @@
     "dev:with-check": "npm run validate && next dev -p 5468",
     "build": "next build",
     "build:with-check": "npm run validate && next build",
-    "start": "next start",
+    "start": "next start -p 5468",
     "lint": "next lint"
   },
   "dependencies": {
