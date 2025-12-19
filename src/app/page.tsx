@@ -43,26 +43,26 @@ export default async function Home() {
       title: "Manifesto",
       description: "Conheça nossos princípios e visão de futuro",
       link: "/manifesto",
-      image: "/icons/selo.svg",
+      image: "/icons/png/manifeto.png",
       featured: true
     },
     {
       title: "Produção Intelectual",
       description: "Obras e pensadores que fundamentam nossa missão",
       link: "/producao-intelectual",
-      image: "/icons/png/LibraryofAlexandria.jpg"
+      image: "/icons/png/LibraryofAristocracia.png"
     },
     {
       title: "Porta-vozes",
       description: "Vozes que amplificam nossa mensagem",
       link: "/porta-vozes",
-      image: "/porta_vozes/Midia_BH.jpg"
+      image: "/icons/png/porta-vozes.png"
     },
     {
       title: "Artigos",
       description: "Análises e reflexões sobre o tempo presente",
       link: "/artigos",
-      image: "/icons/png/aristocracia.png"
+      image: "/icons/png/AristoDiscord.png"
     }
   ];
 
