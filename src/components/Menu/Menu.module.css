@@ -217,24 +217,45 @@
   transition: all 0.3s ease;
   z-index: 1000;
   overflow: hidden;
+  pointer-events: none; /* IMPORTANTE: impede interação quando invisível */
 }
 
+/* CORREÇÃO CRÍTICA: Quando dropdown está ativo */
 .dropdownActive {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto; /* Permite interação quando visível */
+}
+
+/* Garante que o dropdown não desapareça quando hover está sobre ele */
+.navItem:hover .dropdown,
+.dropdown:hover {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
 }
 
+/* Ajusta o hover do item pai para manter dropdown visível */
+.navItem:hover .navLink {
+  color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* Container do Dropdown */
 .dropdownContainer {
   padding: 10px;
 }
 
+/* Conteúdo do Dropdown */
 .dropdownContent {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
+/* Links do Dropdown */
 .dropdownLink {
   display: flex;
   align-items: center;

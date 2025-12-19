@@ -443,7 +443,6 @@ export default function Menu() {
               </ul>
             </nav>
           )}
-
           {/* Botão Mobile - Só aparece abaixo de 1024px */}
           {showMobileMenu && (
             <button 

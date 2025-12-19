@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Menu from '@/components/Menu/Menu';
 import Footer from '@/components/Footer/Footer';
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: 'Aristocracia',
@@ -20,6 +21,7 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
       </head>
       <body>
+        <Analytics/>
         <Menu />
         {children}
         <Footer />
